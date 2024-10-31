@@ -1,6 +1,6 @@
 {
   "name": "react-native-range-chart",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A slider chart component for React Native, enabling interactive range selection with a visually appealing chart interface",
   "main": "index.js",
   "scripts": {
@@ -16,6 +16,10 @@
   ],
   "author": "Usman Khalid <usman.khalid444@gmail.com>",
   "license": "ISC",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/usmankhalid444/react-native-range-chart.git"
+  },
   "dependencies": {
     "@ptomasroos/react-native-multi-slider": "^2.2.2"
   }
