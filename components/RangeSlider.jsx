@@ -2,18 +2,6 @@ import React, { useState } from "react";
 import { ScrollView, View, Text } from "react-native";
 import MultiSlider from "@ptomasroos/react-native-multi-slider";
 
-const CustomMarkerLeft = ({ currentValue }) => (
-  <View style={{alignItems:'center', justifyContent:'center',backgroundColor:'#23527C',padding:8, borderRadius:4}}>
-    <Text style={{color:'white'}}>{currentValue}</Text>
-  </View>
-);
-
-const CustomMarkerRight = ({ currentValue }) => (
-  <View style={{alignItems:'center', justifyContent:'center',backgroundColor:'#23527C',padding:8, borderRadius:4}}>
-    <Text style={{color:'white'}}>{currentValue}</Text>
-  </View>
-);
-
 const RangeSlider = ({
   initialValues,
   min,
@@ -21,6 +9,10 @@ const RangeSlider = ({
   step,
   width,
   onValuesChange,
+  sliderHandleBackgroundColor,
+  sliderHandleTextColor,
+  activeBarColor,
+  inActiveBarColor,
 }) => {
   const [sliderValues, setSliderValues] = useState(initialValues);
 
@@ -30,7 +22,17 @@ const RangeSlider = ({
       onValuesChange(values);
     }
   };
-
+  const CustomMarkerLeft = ({ currentValue }) => (
+    <View style={{alignItems:'center', justifyContent:'center',backgroundColor:sliderHandleBackgroundColor ,padding:8, borderRadius:4}}>
+      <Text style={{color:sliderHandleTextColor}}>{currentValue}</Text>
+    </View>
+  );
+  
+  const CustomMarkerRight = ({ currentValue }) => (
+    <View style={{alignItems:'center', justifyContent:'center',backgroundColor:sliderHandleBackgroundColor ,padding:8, borderRadius:4}}>
+      <Text style={{color:sliderHandleTextColor}}>{currentValue}</Text>
+    </View>
+  );
   return (
     <ScrollView>
       <View style={{paddingHorizontal:18}}>
@@ -41,7 +43,8 @@ const RangeSlider = ({
           max={max}
           step={step}
           isMarkersSeparated={true}
-          selectedStyle={{ backgroundColor: "#23527C" }}
+          selectedStyle={{ backgroundColor: activeBarColor }}
+          unselectedStyle={{ backgroundColor: inActiveBarColor }}
           sliderLength={width}
           customMarkerLeft={(e) => (
             <CustomMarkerLeft currentValue={e.currentValue} />

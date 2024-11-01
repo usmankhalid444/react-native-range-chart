@@ -2,7 +2,7 @@
 # react-native-range-chart
 
 ## Description
-`react-native-range-chart` is a versatile range slider component for React Native, which includes a range slider with one or two handles and an integrated column chart. The column heights represent the frequency of occurrences, making it easy to visualize data distribution within a defined range.
+`react-native-range-chart` is a versatile and customizable range slider component for React Native, which includes a range slider with one or two handles and an integrated column chart. The column heights represent the frequency of occurrences, making it easy to visualize data distribution within a defined range.
 
 ![App Screenshot](https://i.postimg.cc/59Lr6dPC/Screenshot-2024-10-31-at-11-07-11-PM.png)
 ![App Screenshot](https://i.postimg.cc/9FBNYPHX/Screenshot-2024-10-31-at-11-07-41-PM.png)
@@ -61,6 +61,12 @@ For a single-handle slider, set `initialValues` as e.g. `[5]`. For a double-hand
 | **compareWith** | `String`      | Key in the data array to compare values with.                                                     |
 | **initialValues** | `Array`    | Initial values for the range slider; specify `[5]` for one handle, `[5,10]` for two handles. |
 | **onRangeChange** | `Function`  | Callback function that returns the selected range.                                                |
+| **activeChartColor**   | `String`       | Color used for active chart elements. default is `#23527C` |
+| **inactiveChartColor**    | `String`      | Color used for inactive chart elements. default is `#BFBFBF`                                  |
+| **sliderHandleBackgroundColor**    | `String`      | Background color of the slider handle. default is `#22527C`                         |
+| **sliderHandleTextColor**   | `String`      | Text color on the slider handle. default is `white`                     |
+| **activeBarColor** | `String`  | Color used for the active state of the bar. default is `#22527C`                                      |
+| **inActiveBarColor** | `String`      | Color used for the inactive state of the bar. default is `#A7A7A7`                              |
 
 ## License
 This project is licensed under the MIT License.

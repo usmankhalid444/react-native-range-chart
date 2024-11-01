@@ -11,6 +11,12 @@ export default function RangeChart({
   compareWith,
   initialValues,
   onRangeChange,
+  activeChartColor = "#23527C",
+  inactiveChartColor = "#BFBFBF",
+  sliderHandleBackgroundColor="#22527C",
+  sliderHandleTextColor="white",
+  activeBarColor = "#22527C",
+  inActiveBarColor = "#A7A7A7"
 }) {
   const occurrences = {};
   dataArray.forEach((item) => {
@@ -69,8 +75,8 @@ export default function RangeChart({
 
           const color = isHighlighted
             ? inRange
-              ? "#23527C" // Darker color for bars within the range
-              : "#BFBFBF" // Lighter color for bars outside the range
+              ? activeChartColor // Darker color for bars within the range
+              : inactiveChartColor // Lighter color for bars outside the range
             : "transparent";
 
           const barHeight = isHighlighted
@@ -97,6 +103,12 @@ export default function RangeChart({
         step={1}
         width={containerWidth - 35}
         onValuesChange={handleValuesChange}
+        activeChartColor={activeChartColor}
+        inactiveChartColor={inactiveChartColor}
+        sliderHandleBackgroundColor={sliderHandleBackgroundColor}
+        sliderHandleTextColor={sliderHandleTextColor}
+        activeBarColor={activeBarColor}
+        inActiveBarColor={inActiveBarColor}
       />
     </View>
   );
