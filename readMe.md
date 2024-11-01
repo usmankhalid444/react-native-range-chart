@@ -6,6 +6,7 @@
 
 ![App Screenshot](https://i.postimg.cc/59Lr6dPC/Screenshot-2024-10-31-at-11-07-11-PM.png)
 ![App Screenshot](https://i.postimg.cc/9FBNYPHX/Screenshot-2024-10-31-at-11-07-41-PM.png)
+![App Screenshot](https://i.postimg.cc/B6D29XTB/Screenshot-2024-11-01-at-12-48-09-PM.png)
 
 
 ## Installation
